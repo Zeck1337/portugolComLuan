@@ -1,0 +1,25 @@
+programa {
+  inclua biblioteca Util --> u
+  inteiro n[5]
+		inteiro elementos = u.numero_elementos(n)  
+  funcao inicio() {
+
+      para(inteiro i = 0 ; i < elementos ; i++){
+          escreva("digite os valores do vetores: ")
+          leia(n[i])
+
+      }  
+       
+     escreva("Valores apresentado são: \n",n)
+     escreva("\n")
+     
+ // Invertendo a ordem do vetor
+      para (inteiro i = 0; i < elementos / 2; i++) {
+      inteiro temporario = n[i]
+      n[i] = n[elementos - 1 - i]
+      n[elementos - 1 - i] = temporario
+      }
+escreva("Valores invertidos são: \n", n)
+
+       }
+}
